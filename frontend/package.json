@@ -1,0 +1,28 @@
+{
+  "name": "inventory-billing-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron electron/main.cjs\"",
+    "electron:build": "vite build && electron-builder --config electron-builder.json"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12",
+    "vite": "^6.2.5",
+    "wait-on": "^8.0.3"
+  },
+  "main": "electron/main.cjs"
+}

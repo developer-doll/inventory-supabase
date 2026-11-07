@@ -1,0 +1,24 @@
+{
+  "appId": "com.example.inventorybilling",
+  "productName": "Inventory Billing",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "node_modules/**/*",
+    "../electron/**/*"
+  ],
+  "extraMetadata": {
+    "main": "../electron/main.cjs"
+  },
+  "win": {
+    "target": ["nsis"]
+  },
+  "mac": {
+    "target": ["dmg"]
+  },
+  "linux": {
+    "target": ["AppImage"]
+  }
+}
